@@ -1,0 +1,33 @@
+<div id="inicio">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- Indicators -->
+
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+		<div *ngFor="let slide of sliders; let i = index" [class.active]="i == 0" class="item">
+			<img src="{{slide.imageRef}}" alt="slide{{i}}">
+			<div class="carousel-caption">
+				<h3><span>&nbsp;{{slide.titulo}}&nbsp;</span></h3>
+				<p>{{slide.descripcion}}</p>
+				<template [ngIf]="slide.buttonText  != null">
+					<a href="{{slide.buttonRef}}" class="btn btn-primary">{{slide.buttonText}}</a>
+				</template>
+			</div>
+
+		</div>
+
+
+	</div>
+
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+	</div>
+</div>

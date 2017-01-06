@@ -1,0 +1,46 @@
+
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+display: block;
+max-height: 500px !important;
+
+line-height: 1;
+width: 100%; 
+margin: 0 auto;
+}
+
+.carousel-inner{
+    background: #ffffff;
+}
+
+.carousel-caption h3{
+    color: white;
+}
+
+.carousel-caption h3 span{
+    background: rgba(13, 135, 233, 0.6);
+}
+
+.carousel-caption p{
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
+
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
+.carousel-control span{
+    color: #3681DE;
+
+}
+
+.carousel-control {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+
+
+

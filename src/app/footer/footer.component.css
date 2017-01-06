@@ -1,0 +1,32 @@
+footer{
+    background: #1E1E1E;
+    min-height: 150px;
+    color: white;
+    padding: 25px 5px 25px 5px;
+}
+
+h6{
+    color: #9CC1D1;
+    text-align: center;
+}
+
+ul li{
+    list-style:none;
+}
+
+footer ul li span{
+    color: #9CC1D1;
+    padding-right: 5px;
+}
+
+footer ul li a{
+    color: white;
+}
+
+#page li{ 
+    border-top: solid;
+    border-width: 1px;
+    border-color: #9CC1D1
+}
+
+
