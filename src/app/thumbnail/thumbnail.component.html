@@ -21,7 +21,7 @@
 			</a>
 			</template>
 			<template [ngIf]="itemthumbnails.tipoReferencia == 'modalAlojamiento'">
-				<div class="thumbnail" data-toggle="modal" data-target="#modalAlojamientos" > <img  class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}"
+				<div style="cursor: pointer" class="thumbnail" data-toggle="modal" data-target="#modalAlojamientos" > <img  class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}"
 									data-holder-rendered="true" >
 								<div class="caption">
 									<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
@@ -53,7 +53,7 @@
 							</div>
 			</template>
 			<template [ngIf]="itemthumbnails.tipoReferencia == 'modalCruceros'">
-				<div class="thumbnail" data-toggle="modal" data-target="#modalCruceros" > <img  class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}"
+				<div style="cursor: pointer" class="thumbnail" data-toggle="modal" data-target="#modalCruceros" > <img  class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}"
 									data-holder-rendered="true" >
 								<div class="caption">
 									<h4 class="text-center">{{itemthumbnails.titulo}}</h4>

@@ -14,9 +14,8 @@ export class MenubarComponent implements OnInit {
   public item4: ItemMenuBar;
   public title: string = "Titulo";
   constructor() {
-      this.bar.push(new ItemMenuBar('Inicio', null,'#inicio'));
+      this.bar.push(new ItemMenuBar('Inicio', null,'/'));
       this.bar.push(new ItemMenuBar('Servicios',null,'#service'));
-      this.bar.push(new ItemMenuBar('Historia',null,'#history'));
       this.bar.push(new ItemMenuBar('Paquetes Turisticos',null,'#paquetes'));
       this.bar.push(new ItemMenuBar('Aereos',null,'#aereos'));
   }

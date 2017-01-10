@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { routing, appRoutingProviders} from './app.routing';
+
 import { AppComponent } from './app.component';
 import { SocialbarComponent } from './socialbar/socialbar.component';
 import { SliderbarComponent } from './sliderbar/sliderbar.component';
@@ -12,6 +14,9 @@ import { HistoryComponent } from './history/history.component';
 import { FooterComponent } from './footer/footer.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AboutComponent } from './about/about.component';
+import { InstitucionalComponent } from './institucional/institucional.component';
+import { HomeComponent } from './home/home.component';
+import { FinanciacionComponent } from './financiacion/financiacion.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +28,18 @@ import { AboutComponent } from './about/about.component';
     HistoryComponent,
     FooterComponent,
     CustomerComponent,
-    AboutComponent
+    AboutComponent,
+    InstitucionalComponent,
+    HomeComponent,
+    FinanciacionComponent
   ],
   imports: [
+    routing,
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
