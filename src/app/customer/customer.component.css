@@ -3,30 +3,29 @@ list-style:none;
 margin-left: -40px;
 margin-top:20px;
 }
-
-
+#aereos{
+     background-image: url('http://mutualjerarquico.ddns.net/res/img/turismo/avion2.jpg');
+}
 #aereos h2{
     color: white;
     text-shadow: 1px 3px 6px rgba(0, 0, 0, 1);
 }
-
 .parallax {
     /* Set a specific height */
     height: 500px;
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .buscador form {
     background-color: red;
 }
-
 #caja-vuelo{
     background-color: rgba(255, 255, 255, 0.6);
     padding: 21px 40px 20px 40px;
 }
-
+.box-vuelos{
+    margin: 0 auto
+}

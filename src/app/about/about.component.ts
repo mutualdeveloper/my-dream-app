@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemPaquete} from '../../app/model/ItemPaquete';
+import { ItemPaquete} from './ItemPaquete';
 
 @Component({
   selector: 'app-about',
@@ -17,6 +17,4 @@ export class AboutComponent {
     this.paquetes.push(new ItemPaquete('http://mutualjerarquico.ddns.net/res/img/turismo/paquetes/5.jpg','Río de Janeiro', 'toma la descripción 5'));
     this.paquetes.push(new ItemPaquete('http://mutualjerarquico.ddns.net/res/img/turismo/paquetes/6.jpg','Rivera Maya', 'toma la descripción 6'));
   }
-
- 
 }

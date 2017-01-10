@@ -1,32 +1,30 @@
+#page li{ 
+    border-top: solid;
+    border-width: 1px;
+    border-color: #9CC1D1
+}
 footer{
     background: #1E1E1E;
     min-height: 150px;
     color: white;
     padding: 25px 5px 25px 5px;
 }
-
-h6{
-    color: #9CC1D1;
-    text-align: center;
-}
-
-ul li{
-    list-style:none;
-}
-
 footer ul li span{
     color: #9CC1D1;
     padding-right: 5px;
 }
+footer ul a{
+    text-decoration: none;
+}
 
-footer ul li a{
+footer ul a li{
     color: white;
 }
-
-#page li{ 
-    border-top: solid;
-    border-width: 1px;
-    border-color: #9CC1D1
+h6{
+    color: #9CC1D1;
+    text-align: center;
 }
-
+ul li{
+    list-style:none;
+}
 

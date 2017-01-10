@@ -1,19 +1,24 @@
-.thumbnail-image{
- width: 100%; display: block;
-max-height: 200px;
-max-width: 200px;  
+a{
+    color: #FFFFFF;
+    text-decoration: none;
 }
-
+.thumbnail-image{
+    width: 100%; display: block;
+    max-height: 200px;
+    max-width: 200px;  
+}
 .thumbnail {
     border: none;
 }
-
 #service .caption p{
     line-height: 1.3;
     text-align: center;
 }
-
-a{
-    color: #FFFFFF;
-    text-decoration: none;
+.pointer{
+    cursor: pointer;
+}
+.pdf-container{
+    min-height: 600px;
+    width: 100%;
+    height: 100%;
 }

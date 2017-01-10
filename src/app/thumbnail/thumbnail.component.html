@@ -5,102 +5,77 @@
 	<div class="row">
 		<div *ngFor="let itemthumbnails of thumbnails" class="col-sm-6 col-md-6 col-lg-3">
 			<template [ngIf]="itemthumbnails.tipoReferencia == 'referencia'">
-			<a href="{{itemthumbnails.referencia}}">
-				<div class="thumbnail"> <img  class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}"
-					data-holder-rendered="true">
-				<div class="caption">
-					<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
-					<p class="text-center">{{itemthumbnails.texto}}</p>
-					<p class="text-center">
-						<template [ngIf]="itemthumbnails.buttonText  != null">
-							<a href="" class="btn btn-primary">{{itemthumbnails.buttonText}}</a>
-						</template>
-					</p>
-				</div>
-			</div>
-			</a>
+				<a href="{{itemthumbnails.referencia}}">
+					<div class="thumbnail"> <img class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}" data-holder-rendered="true">
+						<div class="caption">
+							<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
+							<p class="text-center">{{itemthumbnails.texto}}</p>
+							<p class="text-center">
+								<template [ngIf]="itemthumbnails.buttonText  != null">
+									<a href="" class="btn btn-primary">{{itemthumbnails.buttonText}}</a>
+								</template>
+							</p>
+						</div>
+					</div>
+				</a>
 			</template>
 			<template [ngIf]="itemthumbnails.tipoReferencia == 'modalAlojamiento'">
-				<div style="cursor: pointer" class="thumbnail" data-toggle="modal" data-target="#modalAlojamientos" > <img  class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}"
-									data-holder-rendered="true" >
-								<div class="caption">
-									<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
-									<p class="text-center">{{itemthumbnails.texto}}</p>
-									<p class="text-center">
-										<template [ngIf]="itemthumbnails.buttonText  != null">
-											<a href="" class="btn btn-primary">{{itemthumbnails.buttonText}}</a>
-										</template>
-									</p>
-								</div>
+				<div class="thumbnail pointer" data-toggle="modal" data-target="#modalAlojamientos"> <img class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}" data-holder-rendered="true">
+					<div class="caption">
+						<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
+						<p class="text-center">{{itemthumbnails.texto}}</p>
+						<p class="text-center">
+							<template [ngIf]="itemthumbnails.buttonText  != null">
+								<a href="" class="btn btn-primary">{{itemthumbnails.buttonText}}</a>
+							</template>
+						</p>
+					</div>
+				</div>
+				<div class="modal fade" id="modal{{itemthumbnails.titulo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title text-center" id="myModalLabel">{{itemthumbnails.titulo}}</h4>
 							</div>
-
-							<div class="modal fade" id="modal{{itemthumbnails.titulo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title text-center" id="myModalLabel">{{itemthumbnails.titulo}}</h4>
-								</div>
-								<div class="modal-body">
-									<div>
-									<object style="min-height: 600px;" data="http://mutualjerarquico.ddns.net/res/img/turismo/convenios.pdf" type="application/pdf" width="100%" heigth="100%">
-									alt : <a href="http://mutualjerarquico.ddns.net/res/img/turismo/convenios.pdf">test.pdf</a>
+							<div class="modal-body">
+								<div>
+									<object class="pdf-container" data="http://mutualjerarquico.ddns.net/res/img/turismo/convenios.pdf" type="application/pdf" >
+										alt : <a href="http://mutualjerarquico.ddns.net/res/img/turismo/convenios.pdf">test.pdf</a>
 									</object>
-									</div>
-								</div>
 								</div>
 							</div>
-							</div>
+						</div>
+					</div>
+			</div>
 			</template>
 			<template [ngIf]="itemthumbnails.tipoReferencia == 'modalCruceros'">
-				<div style="cursor: pointer" class="thumbnail" data-toggle="modal" data-target="#modalCruceros" > <img  class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}"
-									data-holder-rendered="true" >
-								<div class="caption">
-									<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
-									<p class="text-center">{{itemthumbnails.texto}}</p>
-									<p class="text-center">
-										<template [ngIf]="itemthumbnails.buttonText  != null">
-											<a href="" class="btn btn-primary">{{itemthumbnails.buttonText}}</a>
-										</template>
-									</p>
-								</div>
+				<div class="thumbnail pointer" data-toggle="modal" data-target="#modalCruceros"> <img class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}" data-holder-rendered="true">
+					<div class="caption">
+						<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
+						<p class="text-center">{{itemthumbnails.texto}}</p>
+						<p class="text-center">
+							<template [ngIf]="itemthumbnails.buttonText  != null">
+								<a href="" class="btn btn-primary">{{itemthumbnails.buttonText}}</a>
+							</template>
+						</p>
+					</div>
+				</div>
+				<div class="modal fade" id="modal{{itemthumbnails.titulo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title text-center" id="myModalLabel">{{itemthumbnails.titulo}}</h4>
 							</div>
-
-							<div class="modal fade" id="modal{{itemthumbnails.titulo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-							<div class="modal-dialog" role="document">
-								<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title text-center" id="myModalLabel">{{itemthumbnails.titulo}}</h4>
-								</div>
-								<div class="modal-body">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/7.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/2.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/3.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/4.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/5.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/6.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/1.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/8.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/9.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/10.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/11.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/12.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/13.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/14.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/15.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/16.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/17.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/18.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/19.jpg" width="24%" alt="crucero">
-									<img src="http://mutualjerarquico.ddns.net/res/img/turismo/cruceros/20.jpg" width="24%" alt="crucero">
-								</div>
-								
-								</div>
+							<div class="modal-body">
+								<img *ngFor="let crucero of cruceros" src="{{pathImgs}}{{crucero}}" width="24%"
+									alt="crucero">
 							</div>
-							</div>
+						</div>
+					</div>
+				</div>
 			</template>
-			
-		</div>	
+		</div>
 	</div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenubarComponent} from '../menubar/menubar.component';
+import {FooterComponent} from '../footer/footer.component';
 
 @Component({
   selector: 'app-financiacion',

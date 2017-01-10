@@ -27,3 +27,7 @@
 .navbar .navbar-collapse {
     text-align: center;
 }
+
+li a:hover{
+    font-size: 16px;
+}
