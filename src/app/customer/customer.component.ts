@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent {
   public titulo:string = 'Bla bla Titulo';
-  public descripcion:string = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eos neque officiis reiciendis quibusdam enim, qui illo placeat cum sint iusto doloribus est suscipit impedit culpa numquam soluta tenetur recusandae.';
+  public descripcion:string = 'Usted  podra cotizar en  pocos pasos su vuelo ingresando a nuestro cotizaro on line ';
   public btnTitulo:string = 'IR AL COTIZADOR';
   public subtitulo:string = '¡Calcula tu vuelo!';
 
