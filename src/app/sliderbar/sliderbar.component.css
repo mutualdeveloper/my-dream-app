@@ -42,29 +42,5 @@ margin: 0 auto;
 }
 
 
-@media(max-width:767px){
-    #inicio{
-        margin-top: 20px;
-    }
-    .carousel-inner > .item>img {
-        height: 256px;
-    }
-}
-@media(min-width:768px){
-    h3{
-        color: blue;
-    }
-}
-@media(min-width:992px){
-    h3{
-        color: yellow;
-    }
-}
-@media(min-width:1200px){
-    h3{
-        color: purple;
-    }
-}
-
 
 

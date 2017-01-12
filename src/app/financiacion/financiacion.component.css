@@ -7,26 +7,3 @@
 .font-black{
     color: black;
 }
-
-img{
-    width: 100%;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-table, th, td {
-    border: 1px solid #666666;
-}
-
-.td-black{
-    background: #1E1E1E;
-    color: white;
-}
-
-td img{
-    max-width: 70px;
-    margin: 5px 0;
-}
