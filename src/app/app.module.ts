@@ -16,6 +16,7 @@ import { AboutComponent } from './about/about.component';
 import { InstitucionalComponent } from './institucional/institucional.component';
 import { HomeComponent } from './home/home.component';
 import { FinanciacionComponent } from './financiacion/financiacion.component';
+import { AccesoComponent } from './acceso/acceso.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FinanciacionComponent } from './financiacion/financiacion.component';
     AboutComponent,
     InstitucionalComponent,
     HomeComponent,
-    FinanciacionComponent
+    FinanciacionComponent,
+    AccesoComponent
   ],
   imports: [
     routing,
