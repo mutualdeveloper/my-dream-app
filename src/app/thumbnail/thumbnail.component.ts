@@ -22,6 +22,9 @@ export class ThumbnailComponent {
     this.thumbnails.push(new ItemThumbnail('Alojamientos','Cada socio de la Mutual de Petroleros puede contratar en su Departamento de Turismo todo tipo de alojamientos, hoteles, cabañas, hostería o alquileres temporarios.',null,'http://mutualjerarquico.ddns.net/res/img/turismo/servicios/alojamiento.jpg','modal','modalAlojamiento'));
     this.thumbnails.push(new ItemThumbnail('Paquetes','Acerquenos su inquietud y recibirá asesoramiento en base a fechas, cantidad de personal y todo lo necesario para comenzar a armar su paquete turistico.',null,'http://mutualjerarquico.ddns.net/res/img/turismo/servicios/paquetes.jpg','#paquetes','referencia'));
     this.thumbnails.push(new ItemThumbnail('Cruceros','Nuestra Mutual trabaja junto a las dos más grandes empresas de cruceros',null,'http://mutualjerarquico.ddns.net/res/img/turismo/servicios/crucero.jpg',null,'modalCruceros'));
+    this.thumbnails.push(new ItemThumbnail('Seguro de Viajero','Nuestra Mutual trabaja junto a las dos más grandes empresas de cruceros',null,'http://mutualjerarquico.ddns.net/res/img/turismo/seguroviajero.jpg',null,'modalCruceros'));
+    this.thumbnails.push(new ItemThumbnail('Alquiler de Vehiculos','Nuestra Mutual trabaja junto a las dos más grandes empresas de cruceros',null,'http://mutualjerarquico.ddns.net/res/img/turismo/alquilerAuto.jpg',null,'modalCruceros'));
+    
     this.cargarLogosCruceros(['7','2','3', '4','5','6', '1','8','9', '10','11','12','13', '14','15','16', '17','18','19', '20' ]);
   }
 

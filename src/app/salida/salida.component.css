@@ -1,0 +1,41 @@
+#detalle-salida{
+    margin-top: 60px;
+}
+.borde-bajo{
+    border-bottom: 1px dotted #999;
+}
+.box{
+  width:80%;
+  float:left;
+  background-color:white; 
+  margin:25px 10%;
+  border-radius:5px;
+}
+.box h4{
+  font-family: 'Didact Gothic', sans-serif;
+  font-weight:normal;
+  text-align:center;
+  padding: 0 0;
+  color:#fff;
+}
+.box1{
+    background-color: #47B7A9;
+    -webkit-box-shadow: 10px 10px 47px 6px rgba(0,0,0,0.39);
+    -moz-box-shadow: 10px 10px 47px 6px rgba(0,0,0,0.39);
+    box-shadow: 10px 10px 47px 6px rgba(0,0,0,0.39);
+}
+
+.marco{
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+   color: #47B7A9;
+}
+
+h2{
+    margin-bottom: 0;
+}

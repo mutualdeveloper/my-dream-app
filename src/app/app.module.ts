@@ -16,7 +16,8 @@ import { AboutComponent } from './about/about.component';
 import { InstitucionalComponent } from './institucional/institucional.component';
 import { HomeComponent } from './home/home.component';
 import { FinanciacionComponent } from './financiacion/financiacion.component';
-import { AccesoComponent } from './acceso/acceso.component';
+import { SalidaComponent } from './salida/salida.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { AccesoComponent } from './acceso/acceso.component';
     InstitucionalComponent,
     HomeComponent,
     FinanciacionComponent,
-    AccesoComponent
+    SalidaComponent
   ],
   imports: [
     routing,

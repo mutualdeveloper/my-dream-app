@@ -80,3 +80,6 @@ figure:hover figcaption p {
 	transform: translateY(40px);
 }
 
+#myCarousel span:before{
+	color: blue;
+}

@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent {
-  public titulo:string = 'Bla bla Titulo';
-  public descripcion:string = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eos neque officiis reiciendis quibusdam enim, qui illo placeat cum sint iusto doloribus est suscipit impedit culpa numquam soluta tenetur recusandae.';
+  public titulo:string = 'Calculá tu Vuelo';
+  public descripcion:string = 'Todos nuestros socios pueden solicitar pasajes aéreos para volar a cualquier destino de Argentina, como asi tambien al exterior haciendo uso de nuestro cotizador.';
   public btnTitulo:string = 'IR AL COTIZADOR';
   public subtitulo:string = '¡Calcula tu vuelo!';
+  public refCotizador: string = 'http://www.mutualdepetroleros.tur.ar/servicios/ServiciosExternos/aereos';
 
   constructor() { }
 

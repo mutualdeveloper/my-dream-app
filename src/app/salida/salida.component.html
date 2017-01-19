@@ -1,0 +1,56 @@
+<menubar></menubar>
+<div id="detalle-salida" class="container"> 
+  <div id="cabecera" class="text-center">
+      <h2>{{item.titulo}}</h2>
+      <small>({{item.aclaracionTitulo}})</small>
+  </div>
+  
+  <div id="contenido">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h4 class="borde-bajo">Incluye</h4>
+        <p>{{item.incluye}}</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <h4 class="borde-bajo"> Condiciones</h4>
+        <p>{{item.condiciones}}</p>
+        <div>
+          <div class="text-center">
+            <div class="wrap">
+              <div class="box box1 shadow1">
+                <h4> ${{item.precio}} </h4>
+              </div>
+            </div>  
+          </div>
+      </div>
+      </div>
+      
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        <div id="imagenes" style="max-width: 800">
+          <div id="myCarousel" class="carousel slide marco" data-ride="carousel" >
+          <div class="carousel-inner" role="listbox">
+            <div *ngFor="let imagenes of item.imagenes; let i = index" [class.active]="i == 0" class="item">
+              <img src="{{imagenes}}" alt="slide{{i}}">
+              <div class="carousel-caption">
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+
+<router-outlet></router-outlet>
+

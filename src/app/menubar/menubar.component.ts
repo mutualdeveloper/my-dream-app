@@ -10,10 +10,10 @@ export class MenubarComponent implements OnInit {
   public itemHistory: ItemMenuBar;
   public title: string = "Titulo";
   constructor() {
-      this.bar.push(new ItemMenuBar('Inicio', null,'#inicio'));
-      this.bar.push(new ItemMenuBar('Servicios',null,'#service'));
-      this.bar.push(new ItemMenuBar('Aereos',null,'#aereos'));
-      this.bar.push(new ItemMenuBar('Paquetes Turisticos',null,'#paquetes'));
+      this.bar.push(new ItemMenuBar('Inicio', null,'home#inicio'));
+      this.bar.push(new ItemMenuBar('Servicios',null,'home#service'));
+      this.bar.push(new ItemMenuBar('Aereos',null,'home#aereos'));
+      this.bar.push(new ItemMenuBar('Paquetes Turisticos',null,'home#paquetes'));
   }
 
   ngOnInit() {

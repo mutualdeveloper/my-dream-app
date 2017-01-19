@@ -9,6 +9,7 @@ import { ItemPaquete} from './ItemPaquete';
 
 export class AboutComponent {
   public paquetes: Array<ItemPaquete> = [];
+  public refCotizador: string = 'http://www.mutualdepetroleros.tur.ar/servicios/ServiciosExternos/paquetes';
   constructor() { 
     this.paquetes.push(new ItemPaquete('http://mutualjerarquico.ddns.net/res/img/turismo/paquetes/1.jpg','Cataratas del Iguazu', 'toma la descripción'));
     this.paquetes.push(new ItemPaquete('http://mutualjerarquico.ddns.net/res/img/turismo/paquetes/2.jpg','Mendoza', 'toma la descripción 2'));
