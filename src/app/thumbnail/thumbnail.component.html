@@ -76,8 +76,8 @@
 					</div>
 				</div>
 			</template>
-			<template [ngIf]="itemthumbnails.tipoReferencia == 'modalSeguroViajero'">
-				<div class="thumbnail pointer" data-toggle="modal" data-target="#modalSeguroViajero"> <img class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}" data-holder-rendered="true">
+			<template [ngIf]="itemthumbnails.tipoReferencia == 'simple'">
+				<div class="thumbnail"> <img class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}" data-holder-rendered="true">
 					<div class="caption">
 						<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
 						<p class="text-center">{{itemthumbnails.texto}}</p>
@@ -86,20 +86,6 @@
 								<a href="" class="btn btn-primary">{{itemthumbnails.buttonText}}</a>
 							</template>
 						</p>
-					</div>
-				</div>
-				<div class="modal fade" id="modal{{itemthumbnails.titulo}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								<h4 class="modal-title text-center" id="myModalLabel">{{itemthumbnails.titulo}}</h4>
-							</div>
-							<div class="modal-body">
-								<img *ngFor="let crucero of cruceros" src="{{pathImgs}}{{crucero}}" width="24%"
-									alt="crucero">
-							</div>
-						</div>
 					</div>
 				</div>
 			</template>

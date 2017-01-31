@@ -3,6 +3,12 @@
     border-width: 1px;
     border-color: #9CC1D1
 }
+
+.toper{ 
+    border-top: solid;
+    border-width: 1px;
+    border-color: #9CC1D1
+}
 footer{
     background: #1E1E1E;
     min-height: 150px;

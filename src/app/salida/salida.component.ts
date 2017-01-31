@@ -2,22 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router, Params } from '@angular/router';
 import { ItemSalida} from './salida.item.model';
 import { MenubarComponent} from '../menubar/menubar.component';
+import { SalidaService } from './salida.service';
 
 
 @Component({
   selector: 'app-salida',
   templateUrl: './salida.component.html',
-  styleUrls: ['./salida.component.css']
+  styleUrls: ['./salida.component.css'],
+  providers: [SalidaService]
 })
 export class SalidaComponent implements OnInit {
   public id:any;
   public item: ItemSalida;
   public images: Array<string> = [];
+  public it:any;
   constructor(private route: ActivatedRoute,
-  private router: Router) {
+  private router: Router, private salidaService: SalidaService) {
+      
       this.route.params.subscribe(params => {
       this.id = +params['id'];
       });
+      this.getPost();
       this.images.push('http://www.viajayliga.com/wp-content/uploads/2015/03/punta-cana-entertainment.jpg');
       this.images.push('http://zorrodelahorro.com.mx/wp-content/uploads/2016/07/punta-cana-delfin.jpg');
       this.images.push('http://167exq3fv17047q8wx12v2wm.wpengine.netdna-cdn.com/wp-content/uploads/2013/07/Cap-Cana-Adventure-Buggies-CD-9.jpg');
@@ -26,6 +31,13 @@ export class SalidaComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  getPost(){
+    this.salidaService.getPost(3).subscribe(
+    resp => {this.it = resp;console.log(resp)},
+      error => console.log(error)
+    );
   }
 
 }

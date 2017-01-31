@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemMenuBar} from './menubar.item.model';
+import { MenubarServices  } from './menubar.service';
 @Component({
   selector: 'menubar',
   templateUrl: './menubar.component.html',
-  styleUrls: ['./menubar.component.css']
+  styleUrls: ['./menubar.component.css'],
+  providers: [MenubarServices]
 })
 export class MenubarComponent implements OnInit {
   public bar: ItemMenuBar[] = [];
   public itemHistory: ItemMenuBar;
   public title: string = "Titulo";
-  constructor() {
-      this.bar.push(new ItemMenuBar('Inicio', null,'home#inicio'));
-      this.bar.push(new ItemMenuBar('Servicios',null,'home#service'));
-      this.bar.push(new ItemMenuBar('Aereos',null,'home#aereos'));
-      this.bar.push(new ItemMenuBar('Paquetes Turisticos',null,'home#paquetes'));
+  constructor(private menubarService: MenubarServices) {
+      
   }
 
   ngOnInit() {
-    console.log(this.bar);
+    this.menubarService.getMenus().subscribe(
+      resp => this.bar = resp,
+      error => console.log(error)
+    );
   }
 
 }

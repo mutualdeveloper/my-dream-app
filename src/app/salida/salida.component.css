@@ -5,10 +5,10 @@
     border-bottom: 1px dotted #999;
 }
 .box{
-  width:80%;
+  width:50%;
   float:left;
   background-color:white; 
-  margin:25px 10%;
+  margin:25px 25%;
   border-radius:5px;
 }
 .box h4{

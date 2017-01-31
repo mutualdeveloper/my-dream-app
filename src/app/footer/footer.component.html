@@ -1,6 +1,24 @@
 <footer>
 <div class="container">
   <div class="row">
+      <div *ngFor="let tipoFooter of arrayTipoFooter" class="col-lg-4 col-md-6 col-lg-12">
+          <h6><strong>{{tipoFooter}}</strong></h6>
+          <ul>
+            <div *ngFor="let item of itemsFooter" >
+              <template [ngIf]="tipoFooter == 'Páginas' && item.tipo == tipoFooter">
+                <a href="{{item.referencia}}"><li class="toper">{{item.texto}}</li></a>
+              </template>
+              <template [ngIf]="tipoFooter == 'Contacto' && item.tipo == tipoFooter">
+                <a href="{{item.referencia}}"><li><span [ngClass]="item.icono"></span>{{item.texto}}</li></a>
+              </template>
+              <template [ngIf]="tipoFooter == 'Sitios Relacionados' && item.tipo == tipoFooter">
+                <a href="{{item.referencia}}" target="_blank"><li><span [ngClass]="item.icono"></span>{{item.texto}}</li></a>
+              </template>
+            </div>
+          </ul>
+      </div>
+  </div>
+  <!--div class="row">
     <div class="col-lg-4 col-md-6 col-lg-12">
       <h6>Páginas</h6>
       <ul id="page">
@@ -28,7 +46,7 @@
         <a href="http://www.petrolerosjerarquicos.org/" target="_blank"><li><span class="fa fa-chrome"></span>http://www.petrolerosjerarquicos.org/</li></a>
       </ul>
     </div>
-  </div>
+  </div-->
 </div>  
 </footer>
 

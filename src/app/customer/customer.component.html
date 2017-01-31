@@ -1,4 +1,5 @@
-<section id="section-1">
+
+<section *ngIf="customerData" id="section-1">
     <div id="aereos" class="container-fluid text-center parallax">
     <div>
       <h2>Aéreos</h2>
@@ -8,14 +9,14 @@
            <div id="caja-vuelo" class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
                <div class="row">
                    <div id="caja-info" class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                       <div class="h4"><strong>{{titulo}}</strong></div>
-                       <p>{{descripcion}}</p>
+                       <div class="h4"><strong>{{customerData.titulo}}</strong></div>
+                       <p >{{customerData.descripcion}}</p>
                    </div>
                    <div id="caja-cotizador" class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                       <br>      
                        <br>
                        <div class="text-center">
-                           <a href="{{refCotizador}}" target="_blank" class="btn btn-success">{{btnTitulo}}</a>
+                           <a  href="{{customerData.refCotizador}}" target="_blank" class="btn btn-success">{{customerData.btnTitulo}}</a>
                        </div>
                    </div>
                </div>
