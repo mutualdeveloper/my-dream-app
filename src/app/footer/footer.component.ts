@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
 
   datosFooter(){
     this.footerService.getFooterData().subscribe(
-      resp => {this.itemsFooter = resp;console.log(resp)},
+      resp => this.itemsFooter = resp,
       error => console.log(error)
     );
   }

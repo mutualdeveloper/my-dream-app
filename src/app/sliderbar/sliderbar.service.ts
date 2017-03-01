@@ -9,7 +9,7 @@ export class SliderbarService{
     constructor(public http: Http){}
 
     getSliderbar(){
-        return this.http.get('http://localhost/backend/api/carousel').map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend/api/carousel').map(
             resp => this.toItemsCollection(resp.json())
         );
     }

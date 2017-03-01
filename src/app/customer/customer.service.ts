@@ -9,7 +9,7 @@ export class CustomerServices{
     constructor(public http:Http){}
     
     getCustomerData(){
-        return this.http.get('http://localhost/backend/api/aereo').map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend/api/aereo').map(
             resp => this.toItemsCollection(resp.json()[0])
         );
     }

@@ -9,7 +9,7 @@ export class PaqueteServices{
     constructor(public http:Http){}
     
     getPaquetes(){
-        return this.http.get('http://localhost/backend/api/paquete').map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend//api/paquete').map(
             resp => this.toItemsCollection(resp.json())
         );
     }

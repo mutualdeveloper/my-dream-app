@@ -1,8 +1,20 @@
 <router-outlet></router-outlet>
-<br><br>
-<menubar></menubar>
-<sliderbar></sliderbar>
-<thumbnail></thumbnail>
-<app-customer></app-customer>
-<app-about></app-about>   
-<app-footer></app-footer>
+
+
+
+<template [ngIf]="mantenimiento == 'true'">
+<div class="container text-center">
+    <br><br>
+    <h2>Estamos realizando mantenimiento</h2>
+    <img src="https://tienda.dentaljam.es/public/img/mantenimiento.png" alt="">
+</div>
+</template>
+<template [ngIf]="mantenimiento == 'false'">
+    <br><br>
+    <menubar></menubar>
+    <sliderbar></sliderbar>
+    <thumbnail></thumbnail>
+    <app-customer></app-customer>
+    <app-about></app-about>   
+    <app-footer></app-footer>
+</template>

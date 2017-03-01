@@ -9,7 +9,7 @@ export class FooterService{
     constructor(public http:Http){}
     
     getFooterData(){
-        return this.http.get('http://localhost/backend/api/footer').map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend/api/footer').map(
             resp => this.toItemsCollection(resp.json())
         );
     }
@@ -27,7 +27,7 @@ export class FooterService{
     }
 
     getFooterType(){
-        return this.http.get('http://localhost/backend/api/tipofooter').map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend/api/TipoFooter').map(
             resp => this.toItemTypeCollection(resp.json())
         );    
     }

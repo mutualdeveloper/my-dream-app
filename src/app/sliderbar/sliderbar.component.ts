@@ -9,9 +9,9 @@ import { SliderbarService} from './sliderbar.service';
 })
 export class SliderbarComponent implements OnInit {
   public sliders: ItemSliderBar[] = [];
-
+  public status:boolean;
   constructor(private sliderServices: SliderbarService) {
-    
+    this.status = false;
   }
 
   ngOnInit() {
@@ -20,7 +20,7 @@ export class SliderbarComponent implements OnInit {
 
   loadSliders(){
     this.sliderServices.getSliderbar().subscribe(
-      resp => this.sliders = resp,
+      resp => {this.sliders = resp;this.status=true},
       error => console.log(error)
     );
   }

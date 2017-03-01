@@ -9,7 +9,7 @@ export class MenubarServices{
     constructor(public http:Http){}
     
     getMenus(){
-        return this.http.get('http://localhost/backend/api/menu').map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend/api/menu').map(
             resp => this.toItemsCollection(resp.json())
         );
     }

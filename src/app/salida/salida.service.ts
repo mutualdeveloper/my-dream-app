@@ -13,7 +13,7 @@ export class SalidaService{
     constructor(public http:Http){}
     
     getPost(id){
-        return this.http.get('http://localhost/backend/api/post/?id='+id).map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend/api/post/?id='+id).map(
             resp => this.getItem(resp.json())
         );
     }

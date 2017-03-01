@@ -27,7 +27,7 @@ export class ThumbnailService{
 
 
     getThumbnails(){
-        return this.http.get('http://localhost/backend/api/thumbnail').map(
+        return this.http.get('http://mutualdepetroleros.tur.ar/backend/api/thumbnail').map(
             resp => this.toItemsCollection(resp.json())
         );
     }
