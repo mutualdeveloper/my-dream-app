@@ -8,7 +8,7 @@ import { MenubarServices  } from './menubar.service';
   providers: [MenubarServices]
 })
 export class MenubarComponent implements OnInit {
-  public bar: ItemMenuBar[] = [];
+  public bar: ItemMenuBar[];
   public itemHistory: ItemMenuBar;
   public title: string = "Titulo";
   constructor(private menubarService: MenubarServices) {
@@ -16,10 +16,21 @@ export class MenubarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.menubarService.getMenus().subscribe(
-      resp => this.bar = resp,
-      error => console.log(error)
-    );
+    if(this.bar == null){
+      this.menubarService.getMenus().subscribe(
+        resp => this.bar = resp,
+        error => console.log(error)
+      );
+    }else{
+      console.log('tiene datos',this.bar);
+    }
+    
   }
+
+  goTo(location: string,tipo:string): void {
+      if(tipo =='interna'){
+        window.location.hash = location;
+      }
+ }
 
 }

@@ -9,7 +9,14 @@ import {FooterComponent} from '../footer/footer.component';
 })
 export class FinanciacionComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    let doc = document.getElementById('html');
+    doc.className = '';
+    let bo = document.getElementById('body');
+    bo.className = '';
+    let preprepre = document.getElementById('preprepre');
+    preprepre.className = 'hide';
+  }
 
   ngOnInit() {
   }

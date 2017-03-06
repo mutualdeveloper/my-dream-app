@@ -8,6 +8,7 @@ import { SliderbarService} from './sliderbar.service';
   providers: [SliderbarService]
 })
 export class SliderbarComponent implements OnInit {
+  
   public sliders: ItemSliderBar[] = [];
   public status:boolean;
   constructor(private sliderServices: SliderbarService) {

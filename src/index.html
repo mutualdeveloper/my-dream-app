@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html id="html" class="page-document">
 <head>
   <meta charset="utf-8">
   <title>Angular2</title>
@@ -10,37 +10,21 @@
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    .loading {
-        opacity: 0;
-        transition: opacity .8s ease-in-out;
-        position: fixed;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: #2196F3;
-        z-index: -1;
+  <style> 
+    .page-document{
+      width: 100%;
+      height: 100%;
+      background-color: #E5EFF1;
     }
-    app-root:empty + .loading {
-        opacity: 1;
-        z-index: 100;
-    }
-    app-root:empty + .loading h1 {
-        color: #EEE;
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        text-align: center;
-        transform: translate(0, -50%);
+    #preprepre img{
+      margin-top: 10%;
     }
   </style>
 </head>
-<body>
-  <app-root></app-root>
-  <div class="loading">
-        <h1>Cargando...</h1>
-    </div>
+<body id="body" class="page-document">
+  <div id="preprepre" class="page-document text-center"><img src="http://mutualjerarquico.ddns.net/res/img/turismo/loading.gif" alt=""></div>
+  <app-root>  </app-root>
+  
 
   <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>

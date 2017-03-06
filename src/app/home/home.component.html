@@ -1,6 +1,30 @@
 <router-outlet></router-outlet>
 
-
+<style>
+    #animacion {
+        opacity: 0;
+        transition: opacity .8s ease-in-out;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #2196F3;
+        z-index: -1;
+    }
+    app-root:empty + #animacion {
+        opacity: 1;
+        z-index: 100;
+    }
+    app-root:empty + #animacion h1 {
+        color: #EEE;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translate(0, -50%);
+    }
+  </style>
 
 <template [ngIf]="mantenimiento == 'true'">
 <div class="container text-center">
@@ -9,12 +33,15 @@
     <img src="https://tienda.dentaljam.es/public/img/mantenimiento.png" alt="">
 </div>
 </template>
-<template [ngIf]="mantenimiento == 'false'">
-    <br><br>
-    <menubar></menubar>
-    <sliderbar></sliderbar>
-    <thumbnail></thumbnail>
-    <app-customer></app-customer>
-    <app-about></app-about>   
-    <app-footer></app-footer>
+<template  [ngIf]="mantenimiento == 'false'">
+    
+    <div id="contenido" class="hide">
+        <br><br>
+        <menubar ></menubar>
+        <sliderbar></sliderbar>
+        <thumbnail></thumbnail>
+        <app-customer></app-customer>
+        <app-about></app-about>   
+        <app-footer></app-footer>
+    </div>
 </template>

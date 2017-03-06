@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ElementRef,Component, OnInit } from '@angular/core';
 import { MenubarComponent} from '../menubar/menubar.component';
 import { SliderbarComponent} from '../sliderbar/sliderbar.component';
 import { ThumbnailComponent} from '../thumbnail/thumbnail.component';
@@ -17,7 +17,11 @@ import { HomeService} from './home.service';
 
 export class HomeComponent implements  OnInit {
   public mantenimiento:string;
+  public cantComp: number;
+  public finishload: boolean;
   constructor(private homeService: HomeService) {
+     this.cantComp = 0;
+     this.finishload = false;
      this.checkModoMantenimiento();
    }
 
@@ -29,7 +33,21 @@ export class HomeComponent implements  OnInit {
   }
 
   ngOnInit() {
-    
+  }
+
+  ngAfterViewChecked(){
+    this.cantComp++;
+    if(this.cantComp == 34){
+        let doc = document.getElementById('html');
+        doc.className = '';
+        let bo = document.getElementById('body');
+        bo.className = '';
+        let preprepre = document.getElementById('preprepre');
+        preprepre.className = 'hide';
+        this.finishload = true;
+        let contenido = document.getElementById('contenido');
+        contenido.className = 'show';
+    }
   }
 
 }
