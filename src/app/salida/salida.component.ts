@@ -18,7 +18,12 @@ export class SalidaComponent implements OnInit {
   public it:any;
   constructor(private route: ActivatedRoute,
   private router: Router, private salidaService: SalidaService) {
-      
+      let doc = document.getElementById('html');
+      doc.className = '';
+      let bo = document.getElementById('body');
+      bo.className = '';
+      let preprepre = document.getElementById('preprepre');
+      preprepre.className = 'hide';
       this.route.params.subscribe(params => {
       this.id = +params['id'];
       });
@@ -34,8 +39,8 @@ export class SalidaComponent implements OnInit {
   }
 
   getPost(){
-    this.salidaService.getPost(3).subscribe(
-    resp => {this.it = resp;console.log(resp)},
+    this.salidaService.getPost(this.id).subscribe(
+    resp => this.it = resp,
       error => console.log(error)
     );
   }

@@ -83,3 +83,10 @@ figure:hover figcaption p {
 #myCarousel span:before{
 	color: blue;
 }
+
+@media(max-width:992px){
+      figure{
+          margin: 0 auto;
+      }
+    }
+    

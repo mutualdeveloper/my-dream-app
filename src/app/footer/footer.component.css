@@ -34,3 +34,9 @@ ul li{
     list-style:none;
 }
 
+@media(max-width:992px){
+      ul{
+          text-align: center;
+      }
+    }
+    

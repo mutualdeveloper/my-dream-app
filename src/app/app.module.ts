@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { routing, appRoutingProviders} from './app.routing';
+import { LocationStrategy,HashLocationStrategy} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { SocialbarComponent } from './socialbar/socialbar.component';
@@ -40,7 +41,7 @@ import { SalidaComponent } from './salida/salida.component';
     FormsModule,
     HttpModule
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders,{provide: LocationStrategy, useClass: HashLocationStrategy},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

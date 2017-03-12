@@ -29,6 +29,11 @@
 }
 
 li a:hover{
-    font-size: 16px;
+    font-size: 19px;
+    color: white;
 }
 
+li a{
+    color: #b2dbfb;
+    font-size: 18px;
+}

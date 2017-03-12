@@ -10,6 +10,7 @@ import {FooterComponent} from '../footer/footer.component';
 export class InstitucionalComponent implements OnInit {
 
   constructor() {
+    window.scrollTo(0,0);
     let doc = document.getElementById('html');
     doc.className = '';
     let bo = document.getElementById('body');

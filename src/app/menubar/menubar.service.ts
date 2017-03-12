@@ -22,6 +22,14 @@ export class MenubarServices{
         return menuArray;
     }
 
+    toCollection(data){
+        let menuArray: ItemMenuBar[] = [];
+        data.forEach(e => {
+            menuArray.push(this.newItem(e.texto,undefined,e.ref))
+        });
+        return menuArray;
+    }
+
     newItem(texto:string, childItems: ItemMenuBar[], ref:string){
         return new ItemMenuBar(texto, childItems,ref);
     }

@@ -1,7 +1,7 @@
 <footer>
 <div class="container">
   <div class="row">
-      <div *ngFor="let tipoFooter of arrayTipoFooter" class="col-lg-4 col-md-6 col-lg-12">
+      <div *ngFor="let tipoFooter of arrayTipoFooter" class="col-lg-4 col-md-4">
           <h6><strong>{{tipoFooter}}</strong></h6>
           <ul>
             <div *ngFor="let item of itemsFooter" >
@@ -9,7 +9,7 @@
                 <a href="{{item.referencia}}"><li class="toper">{{item.texto}}</li></a>
               </template>
               <template [ngIf]="tipoFooter == 'Contacto' && item.tipo == tipoFooter">
-                <a href="{{item.referencia}}"><li><span [ngClass]="item.icono"></span>{{item.texto}}</li></a>
+                <a href="{{item.referencia}}" target="_blank"><li><span [ngClass]="item.icono"></span>{{item.texto}}</li></a>
               </template>
               <template [ngIf]="tipoFooter == 'Sitios Relacionados' && item.tipo == tipoFooter">
                 <a href="{{item.referencia}}" target="_blank"><li><span [ngClass]="item.icono"></span>{{item.texto}}</li></a>
@@ -18,8 +18,8 @@
           </ul>
           <template [ngIf]="tipoFooter == 'Sitios Relacionados'">
                <div class="text-center">
-                 <img style="margin-right: 4px;" src="http://mutualjerarquico.ddns.net/res/img/turismo/datafiscal.jpg" alt="">
-               <a href="http://servicios.turismo.gob.ar/agencias/constancia/15750" target="_blank"><img style="margin-left: 4px" src="http://mutualjerarquico.ddns.net/res/img/turismo/dataturismo.jpg" alt=""></a>
+                 <img style="margin-right: 4px;" src="http://mutualdepetroleros.tur.ar/assets/imagenes/datafiscal.jpg" alt="">
+               <a href="http://servicios.turismo.gob.ar/agencias/constancia/15750" target="_blank"><img style="margin-left: 4px" src="http://mutualdepetroleros.tur.ar/assets/imagenes/dataturismo.jpg" alt=""></a>
                </div>
           </template>
       </div>
