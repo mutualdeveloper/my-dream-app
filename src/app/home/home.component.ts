@@ -1,4 +1,4 @@
-import { ElementRef,Component, OnInit, Inject,HostListener } from '@angular/core';
+import { ElementRef,Component, OnInit, Inject,HostListener,AfterContentInit } from '@angular/core';
 import { MenubarComponent} from '../menubar/menubar.component';
 import { SliderbarComponent} from '../sliderbar/sliderbar.component';
 import { ThumbnailComponent} from '../thumbnail/thumbnail.component';
@@ -24,42 +24,61 @@ export class HomeComponent implements  OnInit {
   public localRef:string;
   public referenciaAnterior:string='';
   constructor(private homeService: HomeService,@Inject(DOCUMENT) private document: any) {
-     let loc = this.document.location.href;
-     this.ref = loc.substring(loc.lastIndexOf('#')+1);
-     this.cantComp = 0;
-     this.finishload = false;
-     this.checkModoMantenimiento();
+    if(localStorage.getItem('previousUrl') == 'home'){
+      let loc = this.document.location.href;
+      this.ref = loc.substring(loc.lastIndexOf('#')+1);
+      this.cantComp = 0;
+      this.finishload = false;
+      this.checkModoMantenimiento();
+    }else{
+      localStorage.setItem('previousUrl','home');
+      location.reload();
+    }
+     
    }
 
   checkModoMantenimiento(){
     this.homeService.getModoMantenimiento().subscribe(
-      resp => this.mantenimiento = resp.mantenimiento,
+      resp => {this.mantenimiento = resp.mantenimiento,this.ocultarAnimacion()},
       error => console.log(error)
     );
   }
 
+  
+
+  //Evento:desplazamiento interno
   @HostListener('document:click', ['$event'])
   clickout(event) {
     if(event.toElement.href != undefined){
       let referencia:string = event.toElement.href;
-      if(referencia.includes('home')){
+      if(this.checkHomeRef(referencia)){
         this.localRef = referencia.substring(referencia.lastIndexOf('#')+1);
         if(this.localRef != this.referenciaAnterior){
-          console.log('enlace distinto');
         this.referenciaAnterior = this.localRef;
-        this.scrolltoSection(this.localRef);
-        }else{
-          console.log('enlace igual');
+        location.hash = '#' + this.localRef;
         }
       } 
+    }
+  }
+
+  ocultarAnimacion(){
+    if(this.mantenimiento == 'true'){
+      localStorage.setItem('previousUrl','financiacion');
+      window.scrollTo(0,0); 
+      let doc = document.getElementById('html');
+      doc.className = '';
+      let bo = document.getElementById('body');
+      bo.className = '';
+      let preprepre = document.getElementById('preprepre');
+      preprepre.className = 'hide';
     }
     
   }
 
-  ngOnInit() {
+  ngOnInit(){
+
   }
 
-  
 
   ngAfterViewChecked(){
     this.cantComp++;
@@ -73,20 +92,27 @@ export class HomeComponent implements  OnInit {
         this.finishload = true;
         let contenido = document.getElementById('contenido');
         contenido.className = 'show';
-        this.scrolltoSection(this.ref);
+        this.scrolltoSection();
     }
   }
 
-  scrolltoSection(referencia){
-    let selectedDiv = document.getElementById(referencia);
-    console.log('seleccionado',selectedDiv);
+
+ 
+
+  
+  scrolltoSection(){
+    let selectedDiv = document.getElementById(this.ref);
     if(selectedDiv != null){
-      let coordSelectedDiv = selectedDiv.getBoundingClientRect();
-      
-      window.scrollTo(coordSelectedDiv.left,coordSelectedDiv.top);
-    }else{
-      window.scrollTo(0,0);
+      //let coordSelectedDiv = selectedDiv.getBoundingClientRect();
+      //window.scrollTo(coordSelectedDiv.left,coordSelectedDiv.height);
+      location.hash = '#' + this.ref;
     }
   }
+
+  checkHomeRef(ref){
+    return ref.includes('home');
+  }
+
+
 
 }

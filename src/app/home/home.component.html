@@ -26,14 +26,14 @@
     }
   </style>
 
-<template [ngIf]="mantenimiento == 'false'">
+<template [ngIf]="mantenimiento == 'true'">
 <div class="container text-center">
     <br><br>
     <h2>Estamos realizando mantenimiento</h2>
     <img src="http://mutualdepetroleros.tur.ar/assets/imagenes/mantenimiento.png" alt="">
 </div>
 </template>
-<template  [ngIf]="mantenimiento == 'true'">
+<template  [ngIf]="mantenimiento == 'false'">
     
     <div id="contenido" class="hide">
         <br><br>

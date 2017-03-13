@@ -11,6 +11,10 @@ const appRoutes: Routes = [
         redirectTo: '/home',
         pathMatch: 'full'
     },
+    { 
+        path: '#/',
+        redirectTo: '/home'
+    },
     {path: 'institucional', component: InstitucionalComponent},
     {path: 'home', component: HomeComponent},
     {path: 'financiacion', component: FinanciacionComponent},
