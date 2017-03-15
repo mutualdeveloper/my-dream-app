@@ -6,7 +6,7 @@
 		<div *ngFor="let itemthumbnails of thumbnails" class="col-sm-6 col-md-6 col-lg-2">
 			<template [ngIf]="itemthumbnails.tipoReferencia == 'referencia'">
 				<a href="{{itemthumbnails.referencia}}">
-					<div class="thumbnail"> <img class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}" data-holder-rendered="true">
+					<div class="thumbnail referenciaIntera"> <img class="thumbnail-image img-circle" src="{{itemthumbnails.imageRef}}" data-holder-rendered="true">
 						<div class="caption">
 							<h4 class="text-center">{{itemthumbnails.titulo}}</h4>
 							<p class="text-center">{{itemthumbnails.texto}}</p>

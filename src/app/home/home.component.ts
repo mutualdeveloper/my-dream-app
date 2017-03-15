@@ -49,15 +49,20 @@ export class HomeComponent implements  OnInit {
   //Evento:desplazamiento interno
   @HostListener('document:click', ['$event'])
   clickout(event) {
+    let data = event.toElement.src;
     if(event.toElement.href != undefined){
       let referencia:string = event.toElement.href;
-      if(this.checkHomeRef(referencia)){
+      if(this.checkHomeRef(referencia)){       
         this.localRef = referencia.substring(referencia.lastIndexOf('#')+1);
         if(this.localRef != this.referenciaAnterior){
         this.referenciaAnterior = this.localRef;
         location.hash = '#' + this.localRef;
         }
       } 
+    }else if(this.checkRef(data,'http://mutualdepetroleros.tur.ar/assets/imagenes/servicios/aereo.jpg')){
+        location.hash = '#aereos';
+    }else if(this.checkRef(data,'http://mutualdepetroleros.tur.ar/assets/imagenes/servicios/paquetes.jpg')){
+        location.hash = '#paquetes';
     }
   }
 
@@ -111,6 +116,10 @@ export class HomeComponent implements  OnInit {
 
   checkHomeRef(ref){
     return ref.includes('home');
+  }
+
+  checkRef(ref,substring){
+    return  ref.includes(substring);
   }
 
 
